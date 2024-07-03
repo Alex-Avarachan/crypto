@@ -1,0 +1,39 @@
+Blockheader
+	https://medium.com/fcats-blockchain-incubator/understanding-the-bitcoin-blockchain-header-a2b0db06b515
+Transaction
+	https://medium.com/coinmonks/bitcoin-p2pkh-transaction-breakdown-bb663034d6df
+
+
+Stackexchange Link
+	https://bitcoin.stackexchange.com/questions/107944/how-can-i-get-the-destination-address-from-raw-transaction-data
+
+Blockchain resources
+	https://learn.saylor.org/mod/page/view.php?id=37015
+	https://developer.bitcoin.org/reference/transactions.html
+
+	https://en.bitcoin.it/wiki/Transaction#Pay-to-PubkeyHash
+
+Notes
+
+	The hashing algorithm is a HASH160 which is a SHA256 followed by a RIPEMD160 hash - public key hash
+
+
+	PublicKeyHash - Locking script
+	1 P2WPKH : OP_0 OP_PUSHBYTES[20] 97cfc76442fe717f2a3f0cc9c175f7561b661997
+	2 P2PKH  : OP_DUP OP_HASH160 OP_PUSHBYTES[20] 62e907b15cbf27d5425399ebf6f0fb50ebb88f18 OP_EQUALVERIFY OP_CHECKSIG
+	3 P2SH   : OP_HASH160 OP_PUSHBYTES[20] 294410088c380ae01849dd8cff1f8f239ad2b3b6 OP_EQUAL
+
+	OP_0 = 00
+	OP_DUP = 76
+	OP_HASH160 = a9
+	OP_EQUALVERIFY = 88
+	OP_CHECKSIG = ac
+	OP_EQUAL = 87
+
+	SHA256 operation twice on blockheader (hexadecimal) gives block hash (lesser than the difficulty)
+
+SHA 256
+	Explanation
+	https://www.youtube.com/watch?v=orIgy2MjqrA
+
+
